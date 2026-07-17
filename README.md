@@ -1,103 +1,109 @@
-# ⚙️ Producer–Consumer Queue Simulator
+# 🚀 Codveda C++ Internship Projects
 
-A multithreaded console application built using **Modern C++17** and **POSIX Threads (pthread)** that demonstrates the classic **Producer–Consumer synchronization problem** using a shared bounded buffer, mutexes, and condition variables.
+> A collection of advanced C++ projects completed as part of the **Codveda Technology C++ Internship (Level 3)**.
 
-This project was developed as part of the **Codveda Technology C++ Internship (Level 3 – Task 2)**.
+![Language](https://img.shields.io/badge/Language-C%2B%2B17-blue.svg)
+![Build](https://img.shields.io/badge/Build-CMake-green.svg)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ---
 
 ## 📖 Overview
 
-The Producer–Consumer problem is one of the most fundamental synchronization problems in concurrent programming and operating systems.
+This repository contains my solutions for the **Level 3** tasks assigned during the **Codveda Technology C++ Internship**.
 
-This application simulates multiple producer and consumer threads operating on a shared bounded buffer. Producers generate data and place it into the buffer, while consumers retrieve and process that data. Synchronization is implemented using mutexes and condition variables to ensure thread-safe access and prevent race conditions.
+Each project focuses on a different aspect of modern C++ development, including object-oriented programming, file handling, multithreading, synchronization, and game development.
 
----
-
-## ✨ Features
-
-- 🧵 Multiple producer threads
-- 🧵 Multiple consumer threads
-- 📦 Shared bounded buffer
-- 🔒 Thread synchronization using mutexes
-- ⏳ Condition variables for thread coordination
-- ⚡ Real-time production and consumption logs
-- 📊 Simulation statistics
-- ⚙️ Configurable thread count and buffer size
-- 📝 Activity logging
-- ⚠️ Robust error handling
+The projects are organized into separate folders, each containing its own source code, documentation, and project-specific README.
 
 ---
 
-## 🛠️ Tech Stack
+# 📂 Repository Structure
+
+```text
+codveda-cpp-internship/
+
+├── README.md
+├── LICENSE
+│
+├── Task-1-FileSystemSimulation/
+│   ├── README.md
+│   ├── docs/
+│   ├── include/
+│   ├── src/
+│   └── ...
+│
+├── Task-2-ProducerConsumer/
+│   ├── README.md
+│   ├── docs/
+│   ├── include/
+│   ├── src/
+│   └── ...
+│
+└── Task-3-TicTacToe/
+    ├── README.md
+    ├── docs/
+    ├── include/
+    ├── src/
+    └── ...
+```
+
+---
+
+# 📌 Projects
+
+| Task | Project | Description | Status |
+|------|---------|-------------|:------:|
+| **Task 1** | 📁 Simple File System Simulation | A virtual file system that supports file creation, editing, deletion, searching, metadata management, and persistent storage. | ✅ |
+| **Task 2** | ⚙️ Producer–Consumer Queue Simulator | A multithreaded application demonstrating synchronization using mutexes and condition variables with a bounded shared buffer. | ✅ |
+| **Task 3** | 🎮 Tic-Tac-Toe Console Game | A console-based two-player Tic-Tac-Toe game featuring input validation, winner detection, replay support, and score tracking. | ✅ |
+
+---
+
+# ✨ Skills Demonstrated
+
+- Modern C++17
+- Object-Oriented Programming (OOP)
+- File Handling
+- Data Structures
+- Multithreading
+- POSIX Threads (pthread)
+- Synchronization (Mutex & Condition Variables)
+- STL Containers
+- Modular Software Design
+- Error Handling
+- Console Application Development
+
+---
+
+# 🛠️ Technologies Used
 
 | Category | Technology |
 |----------|------------|
 | Language | C++17 |
 | Compiler | GCC / Clang / MSVC |
-| Thread Library | POSIX Threads (pthread) |
 | Build System | CMake |
-| Data Structure | Circular Queue / Queue (STL) |
-| Programming Paradigm | Object-Oriented Programming |
+| Thread Library | POSIX Threads (pthread) |
+| Version Control | Git & GitHub |
 
 ---
 
-## 📂 Project Structure
+# 🚀 Getting Started
 
-```text
-Task-2-ProducerConsumer/
-
-├── README.md
-├── CMakeLists.txt
-│
-├── include/
-│   ├── Buffer.hpp
-│   ├── Producer.hpp
-│   ├── Consumer.hpp
-│   ├── Logger.hpp
-│   ├── Statistics.hpp
-│   └── SimulationManager.hpp
-│
-├── src/
-│   ├── main.cpp
-│   ├── Buffer.cpp
-│   ├── Producer.cpp
-│   ├── Consumer.cpp
-│   ├── Logger.cpp
-│   ├── Statistics.cpp
-│   └── SimulationManager.cpp
-│
-├── logs/
-│   └── simulation.log
-│
-├── docs/
-│   ├── PRD.md
-│   └── Architecture.md
-│
-└── screenshots/
-```
-
----
-
-## 🚀 Getting Started
-
-### Clone the Repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/<your-username>/codveda-cpp-internship.git
 ```
 
-Navigate to the project directory:
+Navigate to any project folder:
 
 ```bash
-cd Level-3/Task-2-ProducerConsumer
+cd codveda-cpp-internship/Task-1-FileSystemSimulation
 ```
 
----
-
-## ⚙️ Build
-
-Using CMake:
+Build using CMake:
 
 ```bash
 mkdir build
@@ -108,197 +114,60 @@ cmake ..
 cmake --build .
 ```
 
-Or compile directly using g++:
-
-```bash
-g++ src/*.cpp -Iinclude -std=c++17 -pthread -o ProducerConsumer
-```
-
-Run the application:
-
-```bash
-./ProducerConsumer
-```
-
 ---
 
-## 📋 Application Menu
+# 📚 Documentation
 
-```text
-==================================
- Producer–Consumer Simulator
-==================================
-
-1. Configure Simulation
-2. Start Simulation
-3. View Statistics
-4. View Activity Log
-5. Reset
-6. Exit
-```
-
----
-
-## ⚙️ Simulation Configuration
-
-Users can configure:
-
-- Number of producer threads
-- Number of consumer threads
-- Buffer capacity
-- Total items to produce
-- Producer delay
-- Consumer delay
-
-Example:
-
-```text
-Producer Threads : 2
-Consumer Threads : 2
-Buffer Size      : 10
-Items            : 100
-```
-
----
-
-## 📊 Sample Output
-
-```text
-==================================
- Producer–Consumer Simulator
-==================================
-
-Simulation Started...
-
-[Producer 1] Produced Item #1
-Buffer: 1/10
-
-[Producer 2] Produced Item #2
-Buffer: 2/10
-
-[Consumer 1] Consumed Item #1
-Buffer: 1/10
-
-[Consumer 2] Consumed Item #2
-Buffer: 0/10
-
-...
-
-Simulation Completed!
-
-Produced : 100
-Consumed : 100
-Execution Time : 3.14 sec
-```
-
----
-
-## 📸 Screenshots
-
-Add screenshots after implementation.
-
-```text
-screenshots/
-
-├── menu.png
-├── simulation.png
-├── statistics.png
-└── logs.png
-```
-
----
-
-## 🏗️ Architecture
-
-```text
-                    User
-                      │
-                      ▼
-             Console Interface
-                      │
-                      ▼
-          Simulation Manager
-          ┌──────────┴──────────┐
-          ▼                     ▼
-   Producer Threads      Consumer Threads
-          │                     │
-          └──────────┬──────────┘
-                     ▼
-             Shared Circular Buffer
-                     │
-         Mutex + Condition Variables
-                     │
-                     ▼
-          Statistics & Activity Logger
-```
-
----
-
-## 📚 Concepts Demonstrated
-
-- Multithreading
-- POSIX Threads (pthread)
-- Mutex Synchronization
-- Condition Variables
-- Producer–Consumer Pattern
-- Circular Queue
-- Thread-safe Programming
-- Object-Oriented Programming
-- Modular Software Design
-- Error Handling
-
----
-
-## 🎯 Learning Outcomes
-
-This project demonstrates practical knowledge of:
-
-- Concurrent programming
-- Synchronization mechanisms
-- Shared resource management
-- Race condition prevention
-- Thread lifecycle management
-- Modular C++ application design
-- Real-world operating system concepts
-
----
-
-## 🚧 Future Improvements
-
-- Thread Pool implementation
-- Dynamic buffer resizing
-- GUI using Qt
-- Real-time queue visualization
-- Priority scheduling
-- Performance benchmarking
-- JSON/CSV log export
-- Cross-platform implementation using `std::thread`
-- Interactive monitoring dashboard
-
----
-
-## 📄 Documentation
+Each project contains its own documentation, including:
 
 - Product Requirements Document (PRD)
-- System Architecture
-- Source Code Documentation
-- Sample Outputs
-- Activity Logs
+- Project README
+- Source Code
+- Architecture Overview
+- Screenshots (where applicable)
 
 ---
 
-## 👨‍💻 Author
+# 🎯 Learning Outcomes
+
+Through these projects, I gained hands-on experience with:
+
+- Designing modular C++ applications
+- Applying object-oriented programming principles
+- Implementing persistent data storage
+- Developing concurrent applications
+- Managing synchronization in multithreaded systems
+- Building interactive console applications
+- Writing maintainable and reusable code
+
+---
+
+# 🚧 Future Enhancements
+
+- Unit Testing
+- Continuous Integration (GitHub Actions)
+- Performance Benchmarking
+- GUI versions using Qt
+- Cross-platform improvements
+- Enhanced documentation
+
+---
+
+# 📜 License
+
+This repository is released under the **MIT License**.
+
+---
+
+# 👨‍💻 Author
 
 **Your Name**
 
-Codveda Technology C++ Internship
+**Codveda Technology – C++ Internship**
 
-GitHub: https://github.com/<your-username>
-
-LinkedIn: https://linkedin.com/in/<your-profile>
+- GitHub: https://github.com/<your-username>
+- LinkedIn: https://linkedin.com/in/<your-profile>
 
 ---
 
-## 📜 License
-
-This project is developed for educational purposes as part of the **Codveda Technology C++ Internship**.
+⭐ If you found this repository useful, feel free to star it!
